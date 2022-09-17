@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   getProperty() {
     this.propertyService.getProperty().subscribe((val) => {
-      this.properties = val.records;
+      if (val.records) this.properties = val.records;
     });
   }
 
